@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 3001;
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://dropchain-peach.vercel.app'
+        'https://dropchain-snowy.vercel.app',
+        'https://dropchain-snowy.vercel.app/',
     ],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'x-api-key', 'x-provider', 'x-chat-id']
