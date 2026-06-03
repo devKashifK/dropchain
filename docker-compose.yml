@@ -1,0 +1,22 @@
+services:
+
+  # ─── Node.js Backend ─────────────────────────────────────
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - FRONTEND_URL=http://localhost:5173
+      - PORT=3001
+
+  # ─── React Frontend ──────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=http://localhost:3001
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

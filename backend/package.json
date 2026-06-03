@@ -1,0 +1,32 @@
+{
+  "name": "drop-chain-backend",
+  "version": "1.0.0",
+  "description": "A tool where our operations team can upload a text document (e.g., a company policy,a product spec, or a technical guide) and then ask an AI agent questions about that specific document.",
+  "license": "ISC",
+  "author": "Kashif Khan",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@google/genai": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^25.9.1",
+    "@types/node-fetch": "^2.6.13",
+    "nodemon": "^3.0.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
