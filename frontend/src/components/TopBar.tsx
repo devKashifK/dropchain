@@ -22,7 +22,7 @@ export function TopBar({ showMenuButton, onToggleSidebar }: TopBarProps) {
   }
 
   return (
-    <div className="w-full h-14 border-b border-border bg-background flex items-center justify-between px-4 md:px-6 shrink-0 z-50">
+    <div className="w-full h-14 border-b border-border bg-background flex items-center justify-between px-4 md:px-6 shrink-0 z-50 sticky top-0">
       <div className="flex items-center gap-3">
         {showMenuButton && (
           <button

@@ -113,7 +113,7 @@ export default function App() {
   );
 
   return (
-    <div className="h-screen w-full flex flex-col overflow-hidden bg-background text-foreground font-sans">
+    <div className="h-dvh w-full flex flex-col overflow-hidden bg-background text-foreground font-sans">
       <TopBar
         showMenuButton={isMobile}
         onToggleSidebar={() => setMobileSidebarOpen(true)}
