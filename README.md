@@ -76,9 +76,19 @@ User asks a question
 git clone https://github.com/devKashifK/dropchain
 cd dropchain
 
-# 3. Start everything with one command
+# 2. Set up environment variables
+cp .env.example .env
+
+# 3. Open `.env` and fill in your GEMINI_API_KEY or the Key that I have provided
+
+
+# 4. Start everything with one command
 docker-compose up --build
 ```
+
+> [!WARNING]
+> **API Key Safety Note:** 
+> I am not hardcoding the api key as it will be flagged as leaked and the gemini will block. I am adding the api with the mail. Pleese use that api key or get your own from google ai studio
 
 **App is now running at:**
 - Frontend → http://localhost:5173
@@ -251,7 +261,7 @@ dropchain/
 The assessment spec explicitly lists it as a valid option. For a demo application it avoids infrastructure complexity while still correctly demonstrating the full RAG pipeline. In production this would be replaced with ChromaDB or Pinecone.
 
 **Why Gemini for both embeddings and LLM?**
-Gemini offers a generous free tier (1,500 requests/day) making the app fully functional without any paid API credits. Additionally, we implement resilient fallback model chains (e.g. falling back to `gemini-3.5-flash` and `gemini-1.5-flash-latest` for LLM tasks, and `text-embedding-004` for embedding tasks) to ensure high service availability in case of model rate-limits or outages.
+Gemini offers a generous free tier (1,500 requests/day) making the app fully functional without any paid API credits. Additionally, we implement resilient fallback model chains (e.g. falling back to `gemini-3.5-flash` and `gemini-1.5-flash-latest` for LLM tasks, and `embedding-001` for embedding tasks) to ensure high service availability in case of model rate-limits or outages.
 
 **Why per-chatId vector stores?**
 Each conversation is isolated in its own vector store using a `Map<chatId, VectorEntry[]>`. This allows multiple users to ingest different documents simultaneously without interference.

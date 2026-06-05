@@ -17,9 +17,10 @@ export async function generateEmbedding(
 ): Promise<number[]> {
     if (provider === 'gemini') {
         const key = apiKey || process.env.GEMINI_API_KEY;
+        console.log(key, "keyyy")
         if (!key) throw new Error('GEMINI_API_KEY is not set');
 
-        const models = ['gemini-embedding-001', 'text-embedding-004'];
+        const models = ['gemini-embedding-001'];
         let lastError: any = null;
 
         for (const model of models) {
