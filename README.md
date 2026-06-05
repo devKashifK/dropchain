@@ -2,7 +2,7 @@
 
 A full-stack RAG (Retrieval-Augmented Generation) application that lets you upload a document and chat with it. The AI answers questions using **only** the provided document as context, and shows you exactly which parts of the document it used to generate the answer.
 
-**Live Demo:** [dropchain-peach.vercel.app](https://dropchain-peach.vercel.app)
+**Live Demo:** https://dropchain-snowy.vercel.app/
 
 **GitHub:** [github.com/devKashifK/dropchain](https://github.com/devKashifK/dropchain)
 
