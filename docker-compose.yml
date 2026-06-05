@@ -6,7 +6,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_API_KEY=AIzaSyBNQVo38vAgxqzb9H3T0rPQsN54NMCvYk0
       - FRONTEND_URL=http://localhost:5173
       - PORT=3001
 

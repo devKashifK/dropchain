@@ -76,13 +76,7 @@ User asks a question
 git clone https://github.com/devKashifK/dropchain
 cd dropchain
 
-# 2. Create environment file
-cp .env.example .env
-
-# 3. Open .env and add your Gemini API key
-# GEMINI_API_KEY=your_key_here
-
-# 4. Start everything with one command
+# 3. Start everything with one command
 docker-compose up --build
 ```
 
